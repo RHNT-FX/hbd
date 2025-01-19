@@ -57,3 +57,17 @@ body {
   position: absolute; /* Tambahkan ini */
   transition: left 0.5s ease-in-out, top 0.5s ease-in-out; /* Transisi untuk left dan top */
 }
+
+#playButton {
+  padding: 10px 20px;
+  background-color: #e9c46a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+  /* ... style lainnya ... */
+  position: relative; /* Tambahkan ini */
+}
