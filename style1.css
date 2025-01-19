@@ -3,20 +3,28 @@ body {
   background-color: #f2e9e4;
   color: #333;
   display: flex;
-  justify-content: center; /* Pusatkan secara horizontal */
-  align-items: center; /* Pusatkan secara vertikal */
-  min-height: 100vh; /* Pastikan body memenuhi tinggi layar */
-  margin: 0; /* Hilangkan margin default */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; /* Sembunyikan scrollbar */
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
   text-align: center;
-  width: 100%;
-  max-width: 600px; /* Tambahkan batas lebar agar terlihat lebih rapi */
+  width: 100%; 
+  min-height: 100vh; /* Gunakan min-height */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Pusatkan elemen secara vertikal */
-  align-items: center; /* Pusatkan elemen secara horizontal */
+  justify-content: center; /* Gunakan justify-content untuk meluruskan secara vertikal */
+  align-items: center; 
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
 }
 
 .kalimat {
@@ -26,7 +34,7 @@ body {
 }
 
 .kalimat.active {
-  display: block; /* Tampilkan hanya kalimat yang aktif */
+  display: block; /* Tampilkan kalimat yang aktif */
 }
 
 #nextButton {
@@ -38,11 +46,14 @@ body {
   cursor: pointer;
 }
 
-#nextButton:hover {
-  background-color: #f4a261;
+.container {
+  /* ... style lainnya ... */
+  position: relative; /* Tambahkan ini */
 }
 
-
 #stiker {
-    width :auto
-    }
+  width: 100px; 
+  height: auto;
+  position: absolute; /* Tambahkan ini */
+  transition: left 0.5s ease-in-out, top 0.5s ease-in-out; /* Transisi untuk left dan top */
+}
