@@ -1,0 +1,59 @@
+body {
+  font-family: sans-serif;
+  background-color: #f2e9e4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden; /* Sembunyikan scrollbar */
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  text-align: center;
+  width: 100%; 
+  min-height: 100vh; /* Gunakan min-height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Gunakan justify-content untuk meluruskan secara vertikal */
+  align-items: center; 
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
+
+.kalimat {
+  font-size: 24px;
+  margin-bottom: 20px;
+  display: none; /* Sembunyikan semua kalimat di awal */
+}
+
+.kalimat.active {
+  display: block; /* Tampilkan kalimat yang aktif */
+}
+
+#nextButton {
+  padding: 10px 20px;
+  background-color: #e9c46a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+  /* ... style lainnya ... */
+  position: relative; /* Tambahkan ini */
+}
+
+#stiker {
+  width: 100px; 
+  height: auto;
+  position: absolute; /* Tambahkan ini */
+  transition: left 0.5s ease-in-out, top 0.5s ease-in-out; /* Transisi untuk left dan top */
+}
